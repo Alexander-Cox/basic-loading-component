@@ -1,0 +1,229 @@
+$sexy-green: rgb(64, 153, 123);
+
+animate-duration-count-infinite {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.loading-component {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  width: 200px;
+}
+
+.square {
+  margin: auto;
+  width: 112px;
+  height: 112px;
+}
+
+.loading-component {
+  h2 {
+    text-align: center;
+    color: $sexy-green;
+  }
+}
+
+.quadrant {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  margin: 4px;
+  border-radius: 2px;
+  position: absolute;
+  border: 1px solid $sexy-green;
+}
+
+.quadrant-1 {
+  border: 1px solid $sexy-green;
+  background-color: $sexy-green;
+}
+
+@mixin generateQuadrantKeyFrames($quad-number, $quad-frames) {
+  .quadrant-#{$quad-number} {
+    @extend animate-duration-count-infinite;
+    animation-name: quad-#{$quad-number};
+  }
+
+  @keyframes quad-#{$quad-number} {
+    @each $frame in $quad-frames {
+      #{map-get($frame, 'percent')} {
+        transform: translateX(#{map-get($frame, 'translate-x')})
+          translateY(#{map-get($frame, 'translate-y')})
+          rotate(#{map-get($frame, 'rotate-degrees')});
+      }
+    }
+  }
+}
+
+$quad-2-frames: (
+    'percent': 10%,
+    'translate-x': '36px',
+    'translate-y': '0px',
+    'rotate-degrees': '90deg',
+  ),
+  (
+    'percent': 100%,
+    'translate-x': '36px',
+    'translate-y': '0px',
+    'rotate-degrees': '90deg',
+  );
+
+@include generateQuadrantKeyFrames(2, $quad-2-frames);
+
+$quad-3-frames: join(
+  $quad-2-frames,
+  (
+    (
+      'percent': 20%,
+      'translate-x': '72px',
+      'translate-y': '0px',
+      'rotate-degrees': '180deg',
+    ),
+    (
+      'percent': 100%,
+      'translate-x': '72px',
+      'translate-y': '0px',
+      'rotate-degrees': '180deg',
+    )
+  )
+);
+
+@include generateQuadrantKeyFrames(3, $quad-3-frames);
+
+$quad-4-frames: (
+    'percent': 20%,
+    'translate-x': '0px',
+    'translate-y': '0px',
+    'rotate-degrees': '0',
+  ),
+  (
+    'percent': 30%,
+    'translate-x': '0px',
+    'translate-y': '36px',
+    'rotate-degrees': '90deg',
+  ),
+  (
+    'percent': 100%,
+    'translate-x': '0px',
+    'translate-y': '36px',
+    'rotate-degrees': '90deg',
+  );
+
+@include generateQuadrantKeyFrames(4, $quad-4-frames);
+
+$quad-5-frames: join(
+  $quad-4-frames,
+  (
+    (
+      (
+        'percent': 40%,
+        'translate-x': '36px',
+        'translate-y': '36px',
+        'rotate-degrees': '180deg',
+      ),
+      (
+        'percent': 100%,
+        'translate-x': '36px',
+        'translate-y': '36px',
+        'rotate-degrees': '180deg',
+      )
+    )
+  )
+);
+
+@include generateQuadrantKeyFrames(5, $quad-5-frames);
+
+$quad-6-frames: join(
+  $quad-5-frames,
+  (
+    (
+      'percent': 50%,
+      'translate-x': '72px',
+      'translate-y': '36px',
+      'rotate-degrees': '270deg',
+    ),
+    (
+      'percent': 100%,
+      'translate-x': '72px',
+      'translate-y': '36px',
+      'rotate-degrees': '270deg',
+    )
+  )
+);
+
+@include generateQuadrantKeyFrames(6, $quad-6-frames);
+
+$quad-7-frames: join(
+  $quad-4-frames,
+  (
+    (
+      'percent': 50%,
+      'translate-x': '0px',
+      'translate-y': '36px',
+      'rotate-degrees': '90deg',
+    ),
+    (
+      'percent': 60%,
+      'translate-x': '0px',
+      'translate-y': '72px',
+      'rotate-degrees': '180deg',
+    ),
+    (
+      'percent': 100%,
+      'translate-x': '0px',
+      'translate-y': '72px',
+      'rotate-degrees': '180deg',
+    )
+  )
+);
+
+@include generateQuadrantKeyFrames(7, $quad-7-frames);
+
+$quad-8-frames: join(
+  $quad-7-frames,
+  (
+    (
+      'percent': 70%,
+      'translate-x': '36px',
+      'translate-y': '72px',
+      'rotate-degrees': '270deg',
+    ),
+    (
+      'percent': 100%,
+      'translate-x': '36px',
+      'translate-y': '72px',
+      'rotate-degrees': '270deg',
+    )
+  )
+);
+
+@include generateQuadrantKeyFrames(8, $quad-8-frames);
+
+$quad-9-frames: join(
+  $quad-8-frames,
+  (
+    (
+      'percent': 80%,
+      'translate-x': '72px',
+      'translate-y': '72px',
+      'rotate-degrees': '360deg',
+    ),
+    (
+      'percent': 100%,
+      'translate-x': '72px',
+      'translate-y': '72px',
+      'rotate-degrees': '360deg',
+    )
+  )
+);
+
+@include generateQuadrantKeyFrames(9, $quad-9-frames);

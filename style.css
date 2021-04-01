@@ -1,7 +1,12 @@
+animate-duration-count-infinite, .quadrant-9, .quadrant-8, .quadrant-7, .quadrant-6, .quadrant-5, .quadrant-4, .quadrant-3, .quadrant-2 {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 body {
   height: 100vh;
   width: 100vw;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
 }
 
 .loading-component {
@@ -18,9 +23,9 @@ body {
   height: 112px;
 }
 
-.loading-component > h2 {
+.loading-component h2 {
   text-align: center;
-  color: rgb(64, 153, 123);
+  color: #40997b;
 }
 
 .quadrant {
@@ -30,214 +35,196 @@ body {
   margin: 4px;
   border-radius: 2px;
   position: absolute;
-  border: 1px solid rgb(64, 153, 123);
+  border: 1px solid #40997b;
 }
 
 .quadrant-1 {
-  border: 1px solid rgb(64, 153, 123);
-  background-color: rgb(64, 153, 123);
+  border: 1px solid #40997b;
+  background-color: #40997b;
 }
 
 .quadrant-2 {
   animation-name: quad-2;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 @keyframes quad-2 {
   10% {
-    transform: translateX(36px) rotate(90deg);
+    transform: translateX(36px) translateY(0px) rotate(90deg);
   }
-
   100% {
-    transform: translateX(36px) rotate(90deg);
+    transform: translateX(36px) translateY(0px) rotate(90deg);
   }
 }
-
 .quadrant-3 {
   animation-name: quad-3;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 @keyframes quad-3 {
   10% {
-    transform: translateX(36px) rotate(90deg);
+    transform: translateX(36px) translateY(0px) rotate(90deg);
   }
-
-  20% {
-    transform: translateX(72px) rotate(180deg);
-  }
-
   100% {
-    transform: translateX(72px) rotate(180deg);
+    transform: translateX(36px) translateY(0px) rotate(90deg);
+  }
+  20% {
+    transform: translateX(72px) translateY(0px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(72px) translateY(0px) rotate(180deg);
   }
 }
-
 .quadrant-4 {
   animation-name: quad-4;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 @keyframes quad-4 {
   20% {
-    transform: translateX(0px) rotate(0);
+    transform: translateX(0px) translateY(0px) rotate(0);
   }
-
   30% {
-    transform: translateY(36px) rotate(90deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
   }
-
   100% {
-    transform: translateY(36px) rotate(90deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
   }
 }
-
 .quadrant-5 {
   animation-name: quad-5;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 @keyframes quad-5 {
   20% {
-    transform: translateX(0px) rotate(0);
+    transform: translateX(0px) translateY(0px) rotate(0);
   }
-
   30% {
-    transform: translateY(36px) rotate(90deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
   }
-
+  100% {
+    transform: translateX(0px) translateY(36px) rotate(90deg);
+  }
   40% {
     transform: translateX(36px) translateY(36px) rotate(180deg);
   }
-
   100% {
     transform: translateX(36px) translateY(36px) rotate(180deg);
   }
 }
-
 .quadrant-6 {
   animation-name: quad-6;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 @keyframes quad-6 {
   20% {
-    transform: translateX(0px) rotate(0);
+    transform: translateX(0px) translateY(0px) rotate(0);
   }
-
   30% {
-    transform: translateY(36px) rotate(90deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
   }
-
+  100% {
+    transform: translateX(0px) translateY(36px) rotate(90deg);
+  }
   40% {
     transform: translateX(36px) translateY(36px) rotate(180deg);
   }
-
+  100% {
+    transform: translateX(36px) translateY(36px) rotate(180deg);
+  }
   50% {
     transform: translateX(72px) translateY(36px) rotate(270deg);
   }
-
   100% {
     transform: translateX(72px) translateY(36px) rotate(270deg);
   }
 }
-
 .quadrant-7 {
   animation-name: quad-7;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 @keyframes quad-7 {
   20% {
-    transform: translateX(0px) rotate(0);
+    transform: translateX(0px) translateY(0px) rotate(0);
   }
-
   30% {
-    transform: translateY(36px) rotate(90deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
   }
-
-  50% {
-    transform: translateY(36px) rotate(90deg);
-  }
-
-  60% {
-    transform: translateY(72px) rotate(180deg);
-  }
-
   100% {
-    transform: translateY(72px) rotate(180deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
+  }
+  50% {
+    transform: translateX(0px) translateY(36px) rotate(90deg);
+  }
+  60% {
+    transform: translateX(0px) translateY(72px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0px) translateY(72px) rotate(180deg);
   }
 }
-
 .quadrant-8 {
   animation-name: quad-8;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 @keyframes quad-8 {
   20% {
-    transform: translateX(0px) rotate(0);
+    transform: translateX(0px) translateY(0px) rotate(0);
   }
-
   30% {
-    transform: translateY(36px) rotate(90deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
   }
-
+  100% {
+    transform: translateX(0px) translateY(36px) rotate(90deg);
+  }
   50% {
-    transform: translateY(36px) rotate(90deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
   }
-
   60% {
-    transform: translateY(72px) rotate(180deg);
+    transform: translateX(0px) translateY(72px) rotate(180deg);
   }
-
+  100% {
+    transform: translateX(0px) translateY(72px) rotate(180deg);
+  }
   70% {
     transform: translateX(36px) translateY(72px) rotate(270deg);
   }
-
   100% {
     transform: translateX(36px) translateY(72px) rotate(270deg);
   }
 }
-
 .quadrant-9 {
   animation-name: quad-9;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 @keyframes quad-9 {
   20% {
-    transform: translateX(0px) rotate(0);
+    transform: translateX(0px) translateY(0px) rotate(0);
   }
-
   30% {
-    transform: translateY(36px) rotate(90deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
   }
-
+  100% {
+    transform: translateX(0px) translateY(36px) rotate(90deg);
+  }
   50% {
-    transform: translateY(36px) rotate(90deg);
+    transform: translateX(0px) translateY(36px) rotate(90deg);
   }
-
   60% {
-    transform: translateY(72px) rotate(180deg);
+    transform: translateX(0px) translateY(72px) rotate(180deg);
   }
-
+  100% {
+    transform: translateX(0px) translateY(72px) rotate(180deg);
+  }
   70% {
     transform: translateX(36px) translateY(72px) rotate(270deg);
   }
-
+  100% {
+    transform: translateX(36px) translateY(72px) rotate(270deg);
+  }
   80% {
     transform: translateX(72px) translateY(72px) rotate(360deg);
   }
-
   100% {
     transform: translateX(72px) translateY(72px) rotate(360deg);
   }
 }
+
+/*# sourceMappingURL=style.css.map */
