@@ -1,3 +1,4 @@
-loading component
+Boxy loading component
 
-Added css build for Sass
+- Added scss build
+- Check it out: https://alexander-cox.github.io/basic-loading-component/index.html
